@@ -1,0 +1,667 @@
+body {
+  font-family: "Rubik", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+nav {
+  background-color: #222;
+  /* Black background */
+  color: #fff;
+  /* White text color */
+  padding: 10px 20px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  /* max-width: 1200px; */
+  margin: 0 auto;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 40px;
+  /* Adjust the height as needed */
+  margin-right: 10px;
+  /* Space between the logo and text */
+}
+
+.logo-text {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #acff38;
+  margin-top: 5px;
+  /* Adjust the top margin as needed */
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.nav-links li {
+  position: relative;
+  margin-right: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: inherit;
+  /* Inherit white text color from nav */
+  padding: 10px;
+}
+
+.auth-buttons {
+  display: flex;
+}
+
+.btn {
+  padding: 10px 15px;
+  background-color: #333;
+  /* Darker gray for buttons */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+.btn:hover {
+  background-color: #111;
+  /* Darker shade on hover */
+}
+
+/* Dropdown Menu */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #acff38;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropbtn {
+  cursor: pointer;
+}
+
+.btn-custom-1:hover {
+  background-color: #acff38;
+  color: white;
+}
+
+.btn-custom-2 {
+  background-color: #acff38;
+  border-color: #acff38;
+  color: white;
+}
+
+.btn-custom-2:hover {
+  background-color: #ffffff;
+  color: #acff38;
+  border-color: #acff38;
+}
+
+.navbar .nav-links li .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  min-width: 200px;
+  text-align: left;
+  font-family: "Rubik", sans-serif;
+}
+
+.fade-in-out {
+  animation: fadeInOut s infinite;
+}
+
+@keyframes fadeInOut {
+  0%,
+  100% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+.image-container {
+  text-align: center;
+}
+
+.image-row img {
+  width: 40px;
+  height: auto;
+}
+
+.image-row p {
+  margin-top: 10px;
+  color: white;
+}
+
+.animation {
+  font-size: 24px;
+  color: white;
+  height: 30px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.animation span {
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  animation: animateText 3s linear infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.animation span:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.animation span:nth-child(2) {
+  animation-delay: 1s;
+}
+
+.animation span:nth-child(3) {
+  animation-delay: 2s;
+}
+
+@keyframes animateText {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+
+  10% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+
+  20% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+
+  30% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.mask {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  /* Align text content center */
+  padding: 20px;
+  /* Adjust padding as needed */
+  box-sizing: border-box;
+  /* Include padding in width and height */
+}
+
+.mask .text-white {
+  z-index: 1;
+  /* Ensure text appears above the background image */
+  position: relative;
+  /* Maintain stacking context */
+}
+
+.bg-image {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  /* Adjust height as needed */
+}
+
+.bg-image .mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+  /* Adjust padding as needed */
+  box-sizing: border-box;
+  /* Include padding in width and height */
+}
+
+.image-row {
+  display: flex;
+  justify-content: space-between;
+  /* Adjust spacing between images */
+  align-items: center;
+  /* Center items vertically */
+  margin-top: 20px;
+  /* Adjust margin as needed */
+}
+
+.image-row img {
+  width: 40px;
+  /* Adjust width of images */
+  height: auto;
+  /* Maintain aspect ratio */
+  margin: 0 100px;
+  /* Adjust horizontal spacing between images */
+}
+
+/* Adjusted CSS for footer */
+footer {
+  background-color: #222;
+  color: #fff;
+  padding: 30px 0;
+}
+
+footer .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+footer .logo img {
+  height: 40px;
+  /* Adjusted logo height */
+}
+
+footer .logo-text {
+  font-size: 1.5rem;
+  /* Adjusted logo text size */
+  margin-top: 0;
+  /* Remove unnecessary margin */
+}
+
+footer .image-row {
+  justify-content: center;
+  /* Center align social icons */
+}
+
+footer .image-row a {
+  margin: 10px;
+  /* Adjust spacing between social icons */
+}
+
+.single-line {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: block;
+  text-decoration: none;
+}
+
+/* .box {
+  position: relative;
+}
+
+.box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle,
+    rgba(172, 255, 56, 0.5),
+    rgba(172, 255, 56, 0) 50%
+  );
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s;
+} */
+
+/* .box.hover-effect::before {
+  opacity: 1; */
+/* } */
+
+.card {
+  overflow: hidden;
+  position: relative;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: skewX(-25deg);
+  transition: left 0.5s;
+}
+
+.card:hover::before {
+  left: 125%;
+}
+
+/* Initial state */
+.hover-effect-box .bg-image {
+  background-color: black;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out, background-color 0.5s ease-in-out;
+}
+
+.hover-effect-box .content {
+  color: white;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+/* Hover effect */
+.hover-effect-box:hover .bg-image {
+  opacity: 0.9;
+  background-color: black;
+  /* Change to desired color */
+}
+
+.hover-effect-box:hover .content {
+  opacity: 0.8;
+  color: yellow;
+  /* Change to desired color */
+}
+/* .animated-heading {
+scale: 1;
+} */
+.animation-box-top {
+  /* width: 50vw;
+  height: 50vh; */
+  scale: 1;
+  margin: auto;
+}
+
+/* Updated CSS for background image animation */
+@keyframes fadeInOut {
+  0%,
+  100% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+/* .payment {
+        background-image: url('/Images/beautiful-cryptocurrwncy-concept.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+        /* Ensure proper stacking context 
+    }
+
+    .mask {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.8);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        /* Align text content center 
+        padding: 20px;
+        /* Adjust padding as needed 
+        box-sizing: border-box;
+        /* Include padding in width and height 
+    }
+
+    .mask .text-white {
+        z-index: 1;
+        /* Ensure text appears above the background image 
+        position: relative;
+        /* Maintain stacking context 
+    } */
+
+.payment {
+  background-image: url("/Images/beautiful-cryptocurrwncy-concept.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 100vh; /* Adjust as needed */
+  overflow: hidden; /* Prevent content overflow */
+}
+
+.mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  height: 100%; /* Take full height of parent */
+}
+
+.mask .text-white {
+  z-index: 1;
+  position: relative;
+}
+
+#image-track {
+  display: flex;
+  gap: 4vmin;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  user-select: none;
+  z-index: 1; /* Ensure it's above the background */
+}
+
+#image-track .image {
+  width: 40vmin;
+  height: 56vmin;
+  object-fit: cover;
+  object-position: 100% center;
+}
+
+.meta-link {
+  align-items: center;
+  backdrop-filter: blur(3px);
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  bottom: 10px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  display: inline-flex;
+  gap: 5px;
+  left: 10px;
+  padding: 10px 20px;
+  position: fixed;
+  text-decoration: none;
+  transition: background-color 400ms, border-color 400ms;
+  z-index: 10000;
+}
+
+.meta-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.meta-link > i,
+.meta-link > span {
+  height: 20px;
+  line-height: 20px;
+}
+
+.meta-link > span {
+  color: white;
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(0, 0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translate(-5px, 0);
+  }
+  20%,
+  40%,
+  60%,
+  80%,
+  100% {
+    transform: translate(5px, 0);
+  }
+}
+
+.image-container:hover img {
+  animation: shake 3s ease-in-out;
+}
+
+.hover-effect-navbar {
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.hover-effect-navbar::before {
+  content: "";
+  position: absolute;
+  top: var(--y2);
+  left: var(--x2);
+  transform: translate(-50%, -50%);
+  background: radial-gradient(
+    rgba(219, 219, 219, 0.518),
+    transparent,
+    transparent
+  );
+  width: 400px;
+  height: 400px;
+  transition: 0.5s, top 0s, left 0s;
+  opacity: 0;
+  border-radius: 10px;
+}
+
+.hover-effect-navbar:hover:before {
+  opacity: 1;
+}
+
+.hover-effect-navbar::after {
+  content: "";
+  position: absolute;
+  inset: 5px;
+  border-radius: 10px;
+  background: transparent;
+}
+
+.hover-effect-course {
+  position: relative;
+  overflow: hidden;
+}
+
+.hover-effect-course::before {
+  content: "";
+  position: absolute;
+  top: var(--y3);
+  left: var(--x3);
+  transform: translate(-50%, -50%);
+  background: radial-gradient(
+    rgba(12, 226, 12, 0.39),
+    transparent,
+    transparent
+  );
+  width: 800px;
+  height: 800px;
+  transition: 0.5s, top 0s, left 0s;
+  opacity: 0;
+}
+
+.hover-effect-course:hover:before {
+  opacity: 1;
+}
+
+.hover-effect-course::after {
+  content: "";
+  position: absolute;
+  inset: 5px;
+  border-radius: 5px;
+  /* background-color: #333; */
+}
+
+/* .cursor {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgb(236, 226, 226);
+  transition: 0.2s;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  mix-blend-mode: difference;
+}
+
+.image-row li:hover ~ .cursor {
+  transform: scale(6);
+} */
+
+.container .row {
+  row-gap:50px;
+}
