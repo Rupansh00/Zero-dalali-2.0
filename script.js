@@ -58,26 +58,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
   gsap.registerPlugin(ScrollTrigger);
 
-  const animationBox = document.querySelector(".animation-box");
+  // const animationBox = document.querySelector(".animation-box");
 
-  gsap.to(animationBox, {
-    //   position:"relative",
-    scale: 1,
-    fill: "#0000ff",
-    scrollTrigger: {
-      trigger: animationBox,
-      start: "top 50%",
-      end: "bottom 60%",
-      scrub: 1,
-      // markers: true,
-      toggleActions: "play reset reverse none",
-      onUpdate: () => {
-        animationBox.style.width = proxy.width + "vw";
-        animationBox.style.height = proxy.height + "vh";
-      },
-    },
-    duration: 2,
-  });
+  // gsap.to(animationBox, {
+  //   //   position:"relative",
+  //   scale: 1,
+  //   fill: "#0000ff",
+  //   scrollTrigger: {
+  //     trigger: animationBox,
+  //     start: "top 50%",
+  //     end: "bottom 60%",
+  //     scrub: 1,
+  //     // markers: true,
+  //     toggleActions: "play reset reverse none",
+  //     onUpdate: () => {
+  //       animationBox.style.width = proxy.width + "vw";
+  //       animationBox.style.height = proxy.height + "vh";
+  //     },
+  //   },
+  //   duration: 2,
+  // });
 
   // const { innerHeight } = window;
 
